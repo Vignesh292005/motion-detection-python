@@ -1,36 +1,89 @@
 
-# Motion Detection using OpenCV
+# 🎥 Motion Detection using OpenCV
 
-## 📌 Description
+This project is a simple real-time motion detection system built using
+Python and OpenCV. It captures video from your webcam and detects motion
+by comparing consecutive frames, highlighting moving objects with
+bounding boxes.
 
-This project detects motion using a webcam using Python and OpenCV.
-It compares consecutive frames and highlights moving objects.
+------------------------------------------------------------------------
 
 ## 🚀 Features
 
-* Real-time motion detection
-* Draws bounding boxes on moving objects
-* Uses frame difference technique
-* Simple and easy to understand
+-   Real-time motion detection
+-   Detects movement using frame differencing
+-   Draws bounding boxes around moving objects
+-   Lightweight and easy to understand
+-   Works directly with your webcam
 
-## 🛠 Requirements
+------------------------------------------------------------------------
 
-* Python 3.x
-* OpenCV
+## 🛠️ Tech Stack
 
-Install OpenCV:
+-   Python
+-   OpenCV (cv2)
+
+------------------------------------------------------------------------
+
+## 📂 Project Structure
+
+    ├── app.py   # Main motion detection script
+
+------------------------------------------------------------------------
+
+## ⚙️ How It Works
+
+1.  Captures two consecutive frames from the webcam\
+2.  Calculates the absolute difference between frames\
+3.  Converts the result to grayscale\
+4.  Applies Gaussian blur to reduce noise\
+5.  Uses thresholding to highlight motion areas\
+6.  Applies dilation to strengthen detected regions\
+7.  Finds contours of moving objects\
+8.  Draws rectangles around detected motion
+
+------------------------------------------------------------------------
+
+## 🧑‍💻 Installation
+
+``` bash
 pip install opencv-python
+```
 
-## ▶️ How to Run
+------------------------------------------------------------------------
 
+## ▶️ Usage
+
+``` bash
 python app.py
+```
 
-Press 'q' to exit the program.
+------------------------------------------------------------------------
 
-## 📁 Project Files
+## ⌨️ Controls
 
-* app.py → Main code file
+-   Press **Q** → Quit the application
 
-## 👨‍💻 Author
+------------------------------------------------------------------------
 
-Vignesh
+## ⚠️ Requirements
+
+-   Python 3.x
+-   Webcam access
+-   OpenCV installed
+
+------------------------------------------------------------------------
+
+## 🧠 Future Improvements
+
+-   Add video recording for detected motion
+-   Save motion clips automatically
+-   Add alert system (email/notification)
+-   Improve accuracy using AI/ML models
+-   Integrate with smart surveillance systems
+
+------------------------------------------------------------------------
+
+## 📌 Author
+
+**Vignesh Mani**
